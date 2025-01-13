@@ -16,8 +16,10 @@ class MainMenuActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val btnAnotherFeature = findViewById<Button>(R.id.btnAnotherFeature)
-        btnAnotherFeature.setOnClickListener {
+        val btnFavorites = findViewById<Button>(R.id.btnFavorites)
+        btnFavorites.setOnClickListener {
+            val intent = Intent(this, FavoritesActivity::class.java)
+            startActivity(intent)
         }
     }
 }
