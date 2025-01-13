@@ -1,3 +1,5 @@
+package com.example.shaketorefreshjokes
+
 import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener

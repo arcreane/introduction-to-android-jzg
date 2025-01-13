@@ -1,3 +1,5 @@
+package com.example.shaketorefreshjokes
+
 import android.hardware.Sensor
 import android.hardware.SensorManager
 import android.os.Bundle
