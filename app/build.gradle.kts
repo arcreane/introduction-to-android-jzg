@@ -52,6 +52,8 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.1")
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
 
     val composeBom = platform("androidx.compose:compose-bom:2023.06.01")
     implementation(composeBom)
