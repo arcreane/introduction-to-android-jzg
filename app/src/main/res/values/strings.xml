@@ -1,3 +1,7 @@
 <resources>
+    <string name="shake_to_get_joke">Shake to get a new joke!</string>
     <string name="app_name">ShakeToRefreshJokes</string>
+    <string name="clear_all">Clear All</string>
+    <string name="refresh">Refresh</string>
+    <string name="favorite">Favorite</string>
 </resources>
