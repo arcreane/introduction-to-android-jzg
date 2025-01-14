@@ -19,14 +19,14 @@
 
     <Button
         android:id="@+id/btnGoToJokes"
-        android:layout_width="wrap_content"
+        android:layout_width="140sp"
         android:layout_height="wrap_content"
         android:text="Go to Jokes"
         android:layout_marginBottom="16dp"/>
 
     <Button
         android:id="@+id/btnFavorites"
-        android:layout_width="wrap_content"
+        android:layout_width="140sp"
         android:layout_height="wrap_content"
         android:text="Favorites"
         android:layout_marginTop="16dp"/>

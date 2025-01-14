@@ -25,6 +25,10 @@ class MainActivity : AppCompatActivity() {
         val btnRefresh = findViewById<Button>(R.id.btnRefresh)
         val btnFavorite = findViewById<Button>(R.id.btnFavorite)
 
+        val sharedPrefs = getSharedPreferences("my_jokes_prefs", MODE_PRIVATE)
+        currentJoke = sharedPrefs.getString("current_joke", null)
+        tvJoke.text = currentJoke ?: "Welcome! Shake to get a new joke."
+
         // Function to fetch jokes
         fun fetchJoke() {
             RetrofitInstance.api.getRandomJoke().enqueue(object : Callback<JokeResponse> {
@@ -70,6 +74,13 @@ class MainActivity : AppCompatActivity() {
     override fun onPause() {
         super.onPause()
         sensorManager.unregisterListener(shakeDetector)
+
+        currentJoke?.let {
+            val sharedPrefs = getSharedPreferences("my_jokes_prefs", MODE_PRIVATE)
+            sharedPrefs.edit()
+                .putString("current_joke", it)
+                .apply()
+        }
     }
 
     override fun onResume() {

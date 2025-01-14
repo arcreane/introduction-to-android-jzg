@@ -7,10 +7,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="Shake to get a joke!"
         android:textSize="18sp"
         android:gravity="center"
         android:padding="16dp" />
+
+    <TextView
+        android:id="@+id/tvJoke2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvJoke"
+        android:layout_marginBottom="116dp"
+        android:text="Shake to get a new joke!"
+        android:textAlignment="center"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/btnFavorite"
@@ -25,8 +34,8 @@
         android:id="@+id/btnRefresh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tvJoke"
-        android:layout_centerHorizontal="true"
+        android:text="Refresh"
         android:layout_marginTop="16dp"
-        android:text="Refresh" />
+        android:layout_below="@id/tvJoke"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
