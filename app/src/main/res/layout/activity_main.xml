@@ -21,12 +21,15 @@
         android:id="@+id/tvJoke"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:textSize="18sp"
-        android:gravity="center"
-        android:padding="16dp"
-        android:textColor="@color/black"
-        android:background="@drawable/textview_background" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+    android:textSize="20sp"
+    android:gravity="center"
+    android:padding="16dp"
+    android:textColor="@color/black"
+    android:background="@drawable/textview_background"
+    android:text="What do you call a troublesome Canadian high schooler?\n\nA poutine." />
+
 
     <Button
         android:id="@+id/btnRefresh"
