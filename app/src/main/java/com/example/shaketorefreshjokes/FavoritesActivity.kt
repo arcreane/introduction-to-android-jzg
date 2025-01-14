@@ -5,6 +5,7 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 
 class FavoritesActivity : AppCompatActivity() {
 
@@ -27,8 +28,14 @@ class FavoritesActivity : AppCompatActivity() {
         favoritesList = favoritesSet?.toMutableList() ?: mutableListOf()
 
         // Set up the ListView adapter
-        adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, favoritesList)
+        adapter = ArrayAdapter(this, R.layout.list_item, favoritesList)
         listViewFavorites.adapter = adapter
+
+        // Update text color dynamically
+        listViewFavorites.setOnItemClickListener { parent, view, position, id ->
+            val textView = view as android.widget.TextView
+            textView.setTextColor(ContextCompat.getColor(this, R.color.jokeTextColor))
+        }
 
         // Set Clear All button click listener
         btnClearFavorites.setOnClickListener {
